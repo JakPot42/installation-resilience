@@ -1,0 +1,56 @@
+{
+  "CAL": {
+    "stress_score": 3.8,
+    "tier": "LOW",
+    "net_load_mwh": 32000.0,
+    "firm_capacity_mw": 52000.0,
+    "demand_mwh": 45000.0,
+    "renewable_pct": 28.9,
+    "hour": "2026-06-23T14"
+  },
+  "TEX": {
+    "stress_score": 64.8,
+    "tier": "HIGH",
+    "net_load_mwh": 61000.0,
+    "firm_capacity_mw": 71000.0,
+    "demand_mwh": 68000.0,
+    "renewable_pct": 10.3,
+    "hour": "2026-06-23T14"
+  },
+  "MIDA": {
+    "stress_score": 35.5,
+    "tier": "ELEVATED",
+    "net_load_mwh": 47500.0,
+    "firm_capacity_mw": 64000.0,
+    "demand_mwh": 51000.0,
+    "renewable_pct": 6.9,
+    "hour": "2026-06-23T14"
+  },
+  "MIDW": {
+    "stress_score": 35.9,
+    "tier": "ELEVATED",
+    "net_load_mwh": 58000.0,
+    "firm_capacity_mw": 78000.0,
+    "demand_mwh": 68000.0,
+    "renewable_pct": 14.7,
+    "hour": "2026-06-23T14"
+  },
+  "NE": {
+    "stress_score": 54.5,
+    "tier": "HIGH",
+    "net_load_mwh": 22900.0,
+    "firm_capacity_mw": 28000.0,
+    "demand_mwh": 25000.0,
+    "renewable_pct": 8.4,
+    "hour": "2026-06-23T14"
+  },
+  "NY": {
+    "stress_score": 32.2,
+    "tier": "ELEVATED",
+    "net_load_mwh": 27700.0,
+    "firm_capacity_mw": 38000.0,
+    "demand_mwh": 30000.0,
+    "renewable_pct": 7.7,
+    "hour": "2026-06-23T14"
+  }
+}
