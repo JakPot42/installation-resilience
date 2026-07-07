@@ -87,9 +87,19 @@ Filed as a future enhancement in `CLAUDE.md`, out of scope here.
 
 ## Status
 
-Step 0 (GridPulse's standalone exception-handling fix) and Step 1 (this
-shared-core library) complete: 37 tests passing, all mocked -- no real
-network/API calls. Step 2 (port all three tools' domain logic onto the
-shared core, wire up the unified `ir` CLI, verify end-to-end with real
-CLI invocations) and Step 3 (distribute the shared core back to the 3
-standalone repos as a consistency pass) haven't started yet.
+Step 0 (GridPulse's standalone exception-handling fix), Step 1 (this
+shared-core library, 37 tests passing, all mocked -- no real network/API
+calls), and Step 2 (domain logic ported onto the shared core in `grid/`,
+`water/`, `energy/`; unified `ir` CLI in `cli.py` wiring 14 subcommands
+across `ir grid`/`ir water`/`ir energy`) are complete, verified with real
+CLI invocations (not just the mocked unit tests) for all three groups.
+
+Step 2 verification caught a real bug pytest couldn't see: Water
+Monitor's `DEMO_BRIEFS` seed text used em-dashes that rendered as
+mojibake on a real Windows cp1252 console (`water brief`/`water demo`)
+-- same class of bug as Cluster 4's. Fixed standalone in water-monitor's
+own repo first (own commit/push), then synced into this repo's
+`water/seed_data.py`.
+
+Step 3 (distribute the shared core back to the 3 standalone repos as a
+consistency pass) hasn't started yet.
