@@ -15,7 +15,9 @@ DB_PATH: str = os.getenv("GRIDPULSE_DB", str(Path(__file__).parent / "gridpulse.
 
 EIA_BASE = "https://api.eia.gov/v2"
 NOAA_BASE = "https://api.weather.gov"
-USER_AGENT = "GridPulse/1.0 (portfolio; contact jak.potvin@gmail.com)"
+# Contact address for the User-Agent header that api.weather.gov asks for,
+# read from the environment so no personal address is committed.
+USER_AGENT = f"GridPulse/1.0 (portfolio; contact {os.getenv('CONTACT_EMAIL', 'not set')})"
 
 # firm_gw: estimated firm (dispatchable) generation capacity in GW per region
 REGIONS: dict[str, dict] = {

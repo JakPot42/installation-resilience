@@ -13,7 +13,9 @@ MODEL: str = os.getenv("WATER_MODEL", "claude-haiku-4-5-20251001")
 
 USGS_BASE = "https://waterservices.usgs.gov/nwis"
 DROUGHT_BASE = "https://usdmdataservices.unl.edu/api"
-USER_AGENT = "WaterMonitor/1.0 (portfolio; contact jak.potvin@gmail.com)"
+# Contact address for the User-Agent header, read from the environment so
+# no personal address is committed.
+USER_AGENT = f"WaterMonitor/1.0 (portfolio; contact {os.getenv('CONTACT_EMAIL', 'not set')})"
 
 # primary_station: USGS gauge site ID for representative streamflow
 # normal_flow_cfs: approximate long-term median discharge at primary station
